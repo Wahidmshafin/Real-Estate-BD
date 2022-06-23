@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <img src="image/propertybg.jpg" alt="" class="starting-image" height="fit-content">
+    <div class="container pt-5">
+
+        <h1 class="display-3" style="font-weight:700;">SUBMIT A PROPERTY</h1>
+        <hr>
+        <br>
+        <br>
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>
+                    <h3 style="font-weight:500;">BASIC INFORMATION</h3>
+                </legend>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="ptitle">PROPERTY TITLE</label>
+                    <div class="col-md-5">
+                        <input id="ptitle" name="ptitle" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="poption">PROPERTY OPTION</label>
+                    <div class="col-md-4">
+                        <label class="radio-inline" for="poption-0">
+                            <input type="radio" name="poption" id="poption-0" value="Sell" checked="checked">
+                            Sell
+                        </label>
+                        <label class="radio-inline px-4" for="poption-1">
+                            <input type="radio" name="poption" id="poption-1" value="Rent">
+                            Rent
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="">PROPERTY TYPE</label>
+                    <div class="col-md-4">
+                        <select id="" name="" class="form-control">
+                            <option value="commercial">Commercial</option>
+                            <option value="residential">Residential</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="area">AREA (SQRFT)</label>
+                    <div class="col-md-4">
+                        <input id="area" name="area" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="city">CITY</label>
+                    <div class="col-md-4">
+                        <select id="city" name="city" class="form-control">
+                            <option value="DHK">DHAKA</option>
+                            <option value="KH">KHULNA</option>
+                            <option value="BR">BARISHAL</option>
+                            <option value="GZ">GAZIPUR</option>
+                            <option value="SY">SYLHET</option>
+                            <option value="RAZ">RAZSHAHI</option>
+                            <option value="RAN">RANGPUR</option>
+                            <option value="BO">BOGURA</option>
+                            <option value="CH">CHITTAGONG</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="price">PRICE (TK)</label>
+                    <div class="col-md-4">
+                        <input id="price" name="price" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="description">DESCRIPTION</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="description" name="description"></textarea>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="bathroom">BATHROOM</label>
+                    <div class="col-md-2">
+                        <input id="bathroom" name="bathroom" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="balcony">BALCONY</label>
+                    <div class="col-md-2">
+                        <input id="balcony" name="balcony" type="text" placeholder="" class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="garge">GARGE</label>
+                    <div class="col-md-2">
+                        <input id="garge" name="garge" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group py-2">
+                    <label class="col-md-4 control-label" for="bedroom">BEDROOM</label>
+                    <div class="col-md-2">
+                        <input id="bedroom" name="bedroom" type="text" placeholder="" class="form-control input-md" required="">
+
+                    </div>
+                </div>
+
+
+                <div class="py-4">
+                    <a href="#" class="btn btn-primary btn-success">
+                        <h6>Sign In</h6>
+                    </a>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -13,13 +13,17 @@
 }
 
 .starting-image {
-    height: 600px;
     width: 100%;
     background-position: center;
     background-size: cover;
     opacity: .5;
     z-index: -1;
     position: absolute;
+}
+
+.starting-image-size {
+    height: 600px;
+
 }
 
 .starting-heading {
