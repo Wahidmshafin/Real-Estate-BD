@@ -149,3 +149,11 @@ input:focus {
 .signInmargin {
     padding-top: 10%;
 }
+
+.submitPropertyImage {
+    height: 1250px;
+}
+
+.property-center {
+    margin: 0 auto;
+}
