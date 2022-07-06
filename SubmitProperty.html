@@ -15,10 +15,8 @@
 </head>
 
 <body>
-
-    <img src="image/propertybg.jpg" alt="" class="starting-image submitPropertyImage" width="100%">
+    <img src="image/niceBG.jpg" alt="" class="starting-image" height="1200px">
     <div class="container pt-5 justify-content-center">
-
         <h1 class="display-3" style="font-weight:700;">SUBMIT A PROPERTY</h1>
         <hr>
         <br>
@@ -27,21 +25,21 @@
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>
+                <legend class="px-5">
                     <h3 style="font-weight:500;">BASIC INFORMATION</h3>
                 </legend>
 
                 <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="ptitle">PROPERTY TITLE</label>
-                    <div class="col-md-5">
+                <div class="form-group py-2 px-5">
+                    <label class="col-md-12 control-label" for="ptitle">PROPERTY TITLE</label>
+                    <div class="col-md-12">
                         <input id="ptitle" name="ptitle" type="text" placeholder="" class="form-control input-md" required="">
 
                     </div>
                 </div>
 
                 <!-- Multiple Radios (inline) -->
-                <div class="form-group py-2">
+                <div class="form-group py-2 px-5">
                     <label class="col-md-4 control-label" for="poption">PROPERTY OPTION</label>
                     <div class="col-md-4">
                         <label class="radio-inline" for="poption-0">
@@ -56,30 +54,35 @@
                 </div>
 
                 <!-- Select Basic -->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="">PROPERTY TYPE</label>
-                    <div class="col-md-4">
-                        <select id="" name="" class="form-control">
-                            <option value="commercial">Commercial</option>
-                            <option value="residential">Residential</option>
-                        </select>
+                <div class="form-group row py-2 px-2">
+                    <div class="col-md-6 px-5">
+                        <label class="control-label" for="">PROPERTY TYPE</label>
+                        <div class="">
+                            <select id="" name="" class="form-control">
+                                <option value="commercial">Commercial</option>
+                                <option value="residential">Residential</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
+                    <div class="col-md-6 px-5">
+                        <label class="control-label" for="area">AREA (SQRFT)</label>
+                        <div class="">
+                            <input id="area" name="area" type="text" placeholder="" class="form-control input-md" required="">
 
-
-                <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="area">AREA (SQRFT)</label>
-                    <div class="col-md-4">
-                        <input id="area" name="area" type="text" placeholder="" class="form-control input-md" required="">
+                        </div>
 
                     </div>
+                    <!-- Text input-->
                 </div>
 
                 <!-- Select Basic -->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="city">CITY</label>
-                    <div class="col-md-4">
+                <div class="form-group row px-2 py-2">
+                    <div class="col-md-6 px-5">
+                        <label class="control-label" for="price">PRICE (TK)</label>
+                        <input id="price" name="price" type="text" placeholder="" class="form-control input-md" required="">
+                    </div>
+                    <div class="col-md-6 px-5">
+                        <label class="control-label" for="city">CITY</label>
                         <select id="city" name="city" class="form-control">
                             <option value="DHK">DHAKA</option>
                             <option value="KH">KHULNA</option>
@@ -94,67 +97,47 @@
                     </div>
                 </div>
 
-                <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="price">PRICE (TK)</label>
-                    <div class="col-md-4">
-                        <input id="price" name="price" type="text" placeholder="" class="form-control input-md" required="">
-
-                    </div>
-                </div>
 
                 <!-- Textarea -->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="description">DESCRIPTION</label>
-                    <div class="col-md-4">
-                        <textarea class="form-control" id="description" name="description"></textarea>
+                <div class="form-group py-2 px-5">
+                    <label class="col-md-12 control-label" for="description">DESCRIPTION</label>
+                    <div class="col-md-12">
+                        <textarea class="form-control" id="description" name="description" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group pt-4">
+                    <div class="col-md-12 px-5">
+                        <label class="control-label" for="thana">ADRESS</label>
+                        <input id="adress" name="adress" type="text" placeholder="" class="form-control input-md" required="">
                     </div>
                 </div>
 
                 <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="bathroom">BATHROOM</label>
-                    <div class="col-md-2">
+                <div class="form-group row px-2 pt-4">
+                    <div class="col-md-4 px-5">
+                        <label class="control-label" for="bathroom">BATHROOM</label>
                         <input id="bathroom" name="bathroom" type="text" placeholder="" class="form-control input-md" required="">
 
                     </div>
-                </div>
-
-                <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="balcony">BALCONY</label>
-                    <div class="col-md-2">
-                        <input id="balcony" name="balcony" type="text" placeholder="" class="form-control input-md">
-
-                    </div>
-                </div>
-
-                <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="garge">GARGE</label>
-                    <div class="col-md-2">
-                        <input id="garge" name="garge" type="text" placeholder="" class="form-control input-md" required="">
-
-                    </div>
-                </div>
-
-                <!-- Text input-->
-                <div class="form-group py-2">
-                    <label class="col-md-4 control-label" for="bedroom">BEDROOM</label>
-                    <div class="col-md-2">
+                    <div class="col-md-4 px-5">
+                        <label class="control-label" for="bedroom">BEDROOM</label>
                         <input id="bedroom" name="bedroom" type="text" placeholder="" class="form-control input-md" required="">
+                    </div>
 
+                    <div class="col-md-4 px-5">
+                        <label class="control-label" for="garge">GARGE</label>
+                        <input id="garge" name="garge" type="text" placeholder="" class="form-control input-md" required="">
                     </div>
                 </div>
-
-
-                <div class="py-4">
-                    <a href="#" class="btn btn-primary btn-success">
-                        <h6>Sign In</h6>
+                <div class="py-5 px-5">
+                    <a href="#" class="btn btn-success btn-lg">
+                        <h5> Submit </h5>
                     </a>
                 </div>
-            </fieldset>
-        </form>
+    </div>
+    </fieldset>
+    </form>
     </div>
 </body>
 

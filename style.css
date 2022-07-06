@@ -157,3 +157,11 @@ input:focus {
 .property-center {
     margin: 0 auto;
 }
+
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
