@@ -1,3 +1,10 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "mydatabase");
+session_start();
+$username = $_SESSION['username'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,13 +18,10 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 
 </head>
@@ -33,8 +37,7 @@
                     <a class="navbar-brand" href="#">Real Estate BD</a>
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglePart"
-                    aria-controls="togglePart" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglePart" aria-controls="togglePart" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -58,7 +61,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="http://localhost/project/loginPage.html">Login</a>
+                            <a class="nav-link active" href="http://localhost/project/logout.php">Logout</a>
                         </li>
 
                     </ul>
@@ -75,7 +78,7 @@
 
             <img src="image/background.jpg" class="starting-image starting-image-size">
             <div class="starting-heading ml-5 big-padding">
-                <h1 class="display-1" style="font-weight:900;">Find Your Perfect Home</h1>
+                <h1 class="display-1" style="font-weight:900;">Hi <?php echo strtoupper($username) ?>, </h1>
             </div>
 
             <div class="starting-para">
@@ -288,7 +291,7 @@
         <div class="property-center py-5">
             <h1 class="display-4 text-center" style="font-weight: 700;">Submit Property</h1>
             <div class="more-btn">
-                <div class="btn btn-primary btn-lg" onclick="location.href='loginPage.html'"> Submit</div>
+                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
             </div>
         </div>
     </section>
