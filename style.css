@@ -165,3 +165,62 @@ input:focus {
     background-position: right center;
     background-size: auto 100%;
 }
+
+/*------/ Property Grid /-----*/
+.property-grid .grid-option {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.property-grid .grid-option .custom-select {
+    border-radius: 0;
+    width: 200px;
+    border-color: #313131;
+}
+
+.property-grid .grid-option .custom-select:hover,
+.property-grid .grid-option .custom-select:active,
+.property-grid .grid-option .custom-select:focus {
+    border-color: #313131;
+}
+
+.property-grid .grid-option .custom-select option {
+    border-color: #313131;
+}
+
+/*------/ Property Single /-----*/
+.gallery-property {
+    margin-bottom: 3rem;
+}
+
+.property-price {
+    margin: 0 auto;
+}
+
+.property-price .card-header-c {
+    padding: 0;
+}
+
+.summary-list {
+    padding-right: 1rem;
+    color: #000000;
+}
+
+.summary-list .list {
+    padding: 0;
+    line-height: 2;
+}
+
+.summary-list .list span {
+    color: #555555;
+}
+
+.title-c {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-left: -40px;
+}
+
+.property-description {
+    height: 8rem;
+}

@@ -1,9 +1,6 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "mydatabase");
-session_start();
-$username = $_SESSION['username'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,8 +25,6 @@ $username = $_SESSION['username'];
 
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/4a53b0080a.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
@@ -59,7 +54,7 @@ $username = $_SESSION['username'];
                             <a class="nav-link active" href="#rent">Rent</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="SubmitProperty.html">Sell</a>
+                            <a class="nav-link active" href="loginPage.html">Sell</a>
                         </li>
 
                         <li class="nav-item">
@@ -67,7 +62,7 @@ $username = $_SESSION['username'];
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="http://localhost/project/logout.php">Logout</a>
+                            <a class="nav-link active" href="http://localhost/project/loginPage.html">Login</a>
                         </li>
 
                     </ul>
@@ -84,7 +79,7 @@ $username = $_SESSION['username'];
 
             <img src="image/background.jpg" class="starting-image starting-image-size">
             <div class="starting-heading ml-5 big-padding">
-                <h1 class="display-1" style="font-weight:900;">Hi <?php echo strtoupper($username) ?>, </h1>
+                <h1 class="display-1" style="font-weight:900;">Find Your Perfect Home</h1>
             </div>
 
             <div class="starting-para">
@@ -103,17 +98,13 @@ $username = $_SESSION['username'];
     <section id="buy">
 
         <h1 class="display-1 text-center top-padding pb-4"><strong>Buy</strong></h1>
-        <div class=" container">
+        <div class="container">
 
             <div class="row">
 
             </div>
 
         </div>
-        </div>
-
-        <div class="more-btn">
-            <div class="btn btn-primary btn-lg">Find More</div>
         </div>
 
     </section>
@@ -128,13 +119,8 @@ $username = $_SESSION['username'];
 
             <div class="row">
 
-            </div>
 
-        </div>
-        </div>
-        <div class="more-btn">
-            <div class="btn btn-primary btn-lg">Find More</div>
-        </div>
+            </div>
     </section>
 
     <!-- Submit Property part -->
@@ -143,13 +129,12 @@ $username = $_SESSION['username'];
         <div class="property-center py-5">
             <h1 class="display-4 text-center" style="font-weight: 700;">Submit Property</h1>
             <div class="more-btn">
-                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
+                <div class="btn btn-primary btn-lg" onclick="location.href='loginPage.html'"> Submit</div>
             </div>
         </div>
     </section>
 
     <!-- Contact Us part -->
-
     <script>
         <?php $q = "select property_id from property where option='Sell'";
         $query = mysqli_query($conn, $q);
@@ -420,7 +405,6 @@ $username = $_SESSION['username'];
             $(this).text(city[i]);
         })
     </script>
-
 
 </body>
 
