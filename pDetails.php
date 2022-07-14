@@ -1,3 +1,12 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "mydatabase");
+$id = $_POST["id"];
+$q = "select * from property where property_id=$id";
+$query = mysqli_query($conn, $q);
+$row = mysqli_fetch_assoc($query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- JavaScript Bundle with Popper -->
@@ -57,11 +68,11 @@
             </div>
         </nav>
     </header>
-    <img src="image/house2.jpg" alt="" width="100%" height="500px">
+    <img src="image/<?php echo $row["picture"]; ?>" alt="" width="100%" height="500px">
     <div class="container pt-5 pb-5 mb-5">
 
         <div class="text-center pb-5 mb-5">
-            <h1>Property Name: <strong>Sagorika</strong></h5>
+            <h1>Property Name: <strong><?php echo strtoupper($row["title"]); ?></strong></h5>
         </div>
         <div class="row">
             <div class="col-sm-12">
@@ -69,7 +80,7 @@
                     <div class="col-md-5 col-lg-4">
                         <div class="property-price d-flex justify-content-center pb-5">
                             <div class="card-title-c align-self-center">
-                                <h5 class="title-c">Price: 1500000TK</h5>
+                                <h5 class="title-c">Price: <?php echo $row["price"]; ?>TK</h5>
                             </div>
                         </div>
                         <div class="property-summary">
@@ -82,12 +93,12 @@
                             </div>
                             <div class="summary-list">
                                 <ul class="list">
-                                    <li class="d-flex justify-content-between"> <strong>Property Type:</strong> <span>House</span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Status:</strong> <span>Sale</span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Area:</strong> <span>340m <sup>2</sup> </span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Beds:</strong> <span>4</span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Baths:</strong> <span>2</span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Garage:</strong> <span>1</span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Property Type:</strong> <span><?php echo $row["type"]; ?></span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Status:</strong> <span><?php echo $row["option"]; ?></span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Area:</strong> <span><?php echo $row["area"]; ?> Sq Ft</span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Beds:</strong> <span><?php echo $row["bedroom"]; ?></span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Baths:</strong> <span><?php echo $row["bathroom"]; ?></span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Garage:</strong> <span><?php echo $row["garge"]; ?></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -96,7 +107,7 @@
                         <div class="row pb-5">
                             <div class="col-sm-12">
                                 <div class="title-box-d">
-                                    <h2 class="title-d">Property ID: 2</h3>
+                                    <h2 class="title-d">Property ID: <?php echo $row["property_id"]; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -108,8 +119,7 @@
                             </div>
                         </div>
                         <div class="property-description">
-                            <p class="description color-text-a"> Vestibulum ante ipsum </p>
-                            <p class="description color-text-a no-margin"> Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.</p>
+                            <p class="description fs-5"> <?php echo $row["description"]; ?> </p>
                         </div>
                         <div class="row section-t3">
                             <div class="col-sm-12">
@@ -119,7 +129,7 @@
                             </div>
                         </div>
                         <div class="color-text-a">
-                            <h4>335, North Shahjahnpur Dhaka</h3>
+                            <h4><?php echo $row["address"] . ", " . $row["city"]; ?></h3>
                         </div>
                     </div>
                 </div>

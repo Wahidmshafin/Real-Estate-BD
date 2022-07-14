@@ -1,5 +1,6 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "mydatabase");
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -126,10 +127,17 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
     <!-- Submit Property part -->
 
     <section id="submit-property">
-        <div class="property-center py-5">
-            <h1 class="display-4 text-center" style="font-weight: 700;">Submit Property</h1>
-            <div class="more-btn">
-                <div class="btn btn-primary btn-lg" onclick="location.href='loginPage.html'"> Submit</div>
+        <div class="property-center pt-5 mt-5">
+            <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
+            <div class="text-center pt-5 mt-5">
+
+                <h1 class="fw-100 pb-4">Looking to Sell your Property?</h1>
+
+                <h3 class="display-6">Are You Tired of Looking for Buyer?</h3>
+                <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
+            </div>
+            <div class="more-btn pt-3">
+                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
             </div>
         </div>
     </section>
@@ -146,7 +154,7 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         $("#buy .row div").addClass("col-4");
         $("#buy .col-4").append("<div></div>");
         $("#buy .col-4 div").addClass("card shadow-sm m-4");
-        $("#buy .card").append("<img>").append("<div></div>");
+        $("#buy .card").append("<img>").append("<div></div>").append("<form></form>");
         $("#buy img").attr("src", "image/").attr("height", "225").attr("width", "100%").attr("alt", "Big House");
         $("#buy .card div").addClass("card-body text-center");
         $("#buy .card-body").append(
@@ -164,9 +172,10 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
             )
         ).append(
             $("<p/>").append(
-                $("<a>").attr("href", "#").addClass("card-link city").text("Dhaka")
+                $("<a>").attr("href", "#").addClass("card-link city")
             )
         );
+        $("#buy form").attr("action", "http://localhost/project/pDetails.php").attr("method", "POST").append($("<button/>").addClass("btn btn-info w-100").attr("type", "submit").attr("name", "id").text("Details"));
 
         <?php
         $arr = array();
@@ -175,10 +184,14 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         }
         ?>
 
-        var arr = <?php echo json_encode($arr); ?>;
+        let arr = <?php echo json_encode($arr); ?>;
         $("#buy .card-text").each(function(i) {
             $(this).text("Property ID:" + arr[i]);
         });
+
+        $("#buy button").each(function(i) {
+            $(this).attr("value", arr[i]);
+        })
 
         <?php
         $price = array();
@@ -265,7 +278,7 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         ?>
 
         let city = <?php echo json_encode($city); ?>;
-        $("#buy city").each(function(i) {
+        $("#buy .city").each(function(i) {
             $(this).text(city[i]);
         })
 
@@ -282,7 +295,7 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         $("#rent .row div").addClass("col-4");
         $("#rent .col-4").append("<div></div>");
         $("#rent .col-4 div").addClass("card shadow-sm m-4");
-        $("#rent .card").append("<img>").append("<div></div>");
+        $("#rent .card").append("<img>").append("<div></div>").append("<form></form>");
         $("#rent img").attr("src", "image/").attr("height", "225").attr("width", "100%").attr("alt", "Big House");
         $("#rent .card div").addClass("card-body text-center");
         $("#rent .card-body").append(
@@ -300,9 +313,11 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
             )
         ).append(
             $("<p/>").append(
-                $("<a>").attr("href", "#").addClass("card-link city").text("Dhaka")
+                $("<a>").attr("href", "#").addClass("card-link city")
             )
         );
+
+        $("#rent form").attr("action", "http://localhost/project/pDetails.php").attr("method", "POST").append($("<button/>").addClass("btn btn-info w-100").attr("type", "submit").attr("name", "id").text("Details"));
 
         <?php
         $arr = array();
@@ -315,6 +330,10 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         $("#rent .card-text").each(function(i) {
             $(this).text("Property ID:" + arr[i]);
         });
+
+        $("#rent button").each(function(i) {
+            $(this).attr("value", arr[i]);
+        })
 
         <?php
         $price = array();
@@ -401,7 +420,7 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         ?>
 
         city = <?php echo json_encode($city); ?>;
-        $("#rent city").each(function(i) {
+        $("#rent .city").each(function(i) {
             $(this).text(city[i]);
         })
     </script>

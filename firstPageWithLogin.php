@@ -1,7 +1,14 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "mydatabase");
 session_start();
-$username = $_SESSION['username'];
+if (time() - $_SESSION["time"] > 600) {
+    session_unset();
+    session_destroy();
+    header("Location:http://localhost/project/firstPage.php");
+} else {
+    $username = $_SESSION['username'];
+}
+
 ?>
 
 
@@ -110,11 +117,6 @@ $username = $_SESSION['username'];
             </div>
 
         </div>
-        </div>
-
-        <div class="more-btn">
-            <div class="btn btn-primary btn-lg bb">Find More</div>
-        </div>
 
     </section>
 
@@ -131,16 +133,14 @@ $username = $_SESSION['username'];
             </div>
 
         </div>
-        </div>
-        <div class="more-btn">
-            <div class="btn btn-primary btn-lg bb">Find More</div>
-        </div>
+
     </section>
 
     <!-- Submit Property part -->
 
     <section id="submit-property">
         <div class="property-center py-5">
+            <img src="image/beachHouse.jpg" class="starting-image" alt="" width="10%" height="500px">
             <h1 class="display-4 text-center" style="font-weight: 700;">Submit Property</h1>
             <div class="more-btn">
                 <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
@@ -151,18 +151,6 @@ $username = $_SESSION['username'];
     <!-- Contact Us part -->
 
     <script>
-        $(document).ready(function() {
-            $("div .col-4").click(function() {
-                let str = $(this).find(".card-text").text();
-                str = str.slice(str.length - 2, str.length);
-                alert("habi" + str);
-                $(this).find(".card-text").text();
-                //window.location.href = "http://localhost/project/pDetails.php";
-
-            });
-        });
-
-
         <?php $q = "select property_id from property where option='Sell'";
         $query = mysqli_query($conn, $q);
         ?>
@@ -173,7 +161,7 @@ $username = $_SESSION['username'];
         $("#buy .row div").addClass("col-4");
         $("#buy .col-4").append("<div></div>");
         $("#buy .col-4 div").addClass("card shadow-sm m-4");
-        $("#buy .card").append("<img>").append("<div></div>");
+        $("#buy .card").append("<img>").append("<div></div>").append("<form></form>");
         $("#buy img").attr("src", "image/").attr("height", "225").attr("width", "100%").attr("alt", "Big House");
         $("#buy .card div").addClass("card-body text-center");
         $("#buy .card-body").append(
@@ -191,9 +179,10 @@ $username = $_SESSION['username'];
             )
         ).append(
             $("<p/>").append(
-                $("<a>").attr("href", "#").addClass("card-link city").text("Dhaka")
+                $("<a>").attr("href", "#").addClass("card-link city")
             )
         );
+        $("#buy form").attr("action", "http://localhost/project/pDetails.php").attr("method", "POST").append($("<button/>").addClass("btn btn-info w-100").attr("type", "submit").attr("name", "id").text("Details"));
 
         <?php
         $arr = array();
@@ -202,10 +191,14 @@ $username = $_SESSION['username'];
         }
         ?>
 
-        var arr = <?php echo json_encode($arr); ?>;
+        let arr = <?php echo json_encode($arr); ?>;
         $("#buy .card-text").each(function(i) {
             $(this).text("Property ID:" + arr[i]);
         });
+
+        $("#buy button").each(function(i) {
+            $(this).attr("value", arr[i]);
+        })
 
         <?php
         $price = array();
@@ -292,7 +285,7 @@ $username = $_SESSION['username'];
         ?>
 
         let city = <?php echo json_encode($city); ?>;
-        $("#buy city").each(function(i) {
+        $("#buy .city").each(function(i) {
             $(this).text(city[i]);
         })
 
@@ -309,7 +302,7 @@ $username = $_SESSION['username'];
         $("#rent .row div").addClass("col-4");
         $("#rent .col-4").append("<div></div>");
         $("#rent .col-4 div").addClass("card shadow-sm m-4");
-        $("#rent .card").append("<img>").append("<div></div>");
+        $("#rent .card").append("<img>").append("<div></div>").append("<form></form>");
         $("#rent img").attr("src", "image/").attr("height", "225").attr("width", "100%").attr("alt", "Big House");
         $("#rent .card div").addClass("card-body text-center");
         $("#rent .card-body").append(
@@ -327,9 +320,11 @@ $username = $_SESSION['username'];
             )
         ).append(
             $("<p/>").append(
-                $("<a>").attr("href", "#").addClass("card-link city").text("Dhaka")
+                $("<a>").attr("href", "#").addClass("card-link city")
             )
         );
+
+        $("#rent form").attr("action", "http://localhost/project/pDetails.php").attr("method", "POST").append($("<button/>").addClass("btn btn-info w-100").attr("type", "submit").attr("name", "id").text("Details"));
 
         <?php
         $arr = array();
@@ -342,6 +337,10 @@ $username = $_SESSION['username'];
         $("#rent .card-text").each(function(i) {
             $(this).text("Property ID:" + arr[i]);
         });
+
+        $("#rent button").each(function(i) {
+            $(this).attr("value", arr[i]);
+        })
 
         <?php
         $price = array();
@@ -428,7 +427,7 @@ $username = $_SESSION['username'];
         ?>
 
         city = <?php echo json_encode($city); ?>;
-        $("#rent city").each(function(i) {
+        $("#rent .city").each(function(i) {
             $(this).text(city[i]);
         })
     </script>
