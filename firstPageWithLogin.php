@@ -139,10 +139,16 @@ if (time() - $_SESSION["time"] > 600) {
     <!-- Submit Property part -->
 
     <section id="submit-property">
-        <div class="property-center py-5">
-            <img src="image/beachHouse.jpg" class="starting-image" alt="" width="10%" height="500px">
-            <h1 class="display-4 text-center" style="font-weight: 700;">Submit Property</h1>
-            <div class="more-btn">
+        <div class="property-center pt-5 mt-5">
+            <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
+            <div class="text-center pt-5 mt-5">
+
+                <h1 class="fw-100 pb-4">Looking to Sell your Property?</h1>
+
+                <h3 class="display-6">Are You Tired of Looking for Buyer?</h3>
+                <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
+            </div>
+            <div class="more-btn pt-3">
                 <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
             </div>
         </div>
