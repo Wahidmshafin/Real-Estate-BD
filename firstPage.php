@@ -115,7 +115,7 @@ $conn = mysqli_connect("localhost", "root", "", "mydatabase");
         <div class="rent-heading">
             <h1 class="display-1 text-center top-padding pb-4"><strong>Rent</strong></h1>
         </div>
-        <div class=" container">
+        <div class="container">
 
             <div class="row">
 

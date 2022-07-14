@@ -113,7 +113,7 @@ $username = $_SESSION['username'];
         </div>
 
         <div class="more-btn">
-            <div class="btn btn-primary btn-lg">Find More</div>
+            <div class="btn btn-primary btn-lg bb">Find More</div>
         </div>
 
     </section>
@@ -133,7 +133,7 @@ $username = $_SESSION['username'];
         </div>
         </div>
         <div class="more-btn">
-            <div class="btn btn-primary btn-lg">Find More</div>
+            <div class="btn btn-primary btn-lg bb">Find More</div>
         </div>
     </section>
 
@@ -151,6 +151,18 @@ $username = $_SESSION['username'];
     <!-- Contact Us part -->
 
     <script>
+        $(document).ready(function() {
+            $("div .col-4").click(function() {
+                let str = $(this).find(".card-text").text();
+                str = str.slice(str.length - 2, str.length);
+                alert("habi" + str);
+                $(this).find(".card-text").text();
+                //window.location.href = "http://localhost/project/pDetails.php";
+
+            });
+        });
+
+
         <?php $q = "select property_id from property where option='Sell'";
         $query = mysqli_query($conn, $q);
         ?>
