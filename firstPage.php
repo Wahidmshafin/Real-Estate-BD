@@ -131,9 +131,9 @@ session_start();
             <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
             <div class="text-center pt-5 mt-5">
 
-                <h1 class="fw-100 pb-4">Looking to Sell your Property?</h1>
+                <h1 class="fw-100 pb-4">Rent or Sell?</h1>
 
-                <h3 class="display-6">Are You Tired of Looking for Buyer?</h3>
+                <h3 class="display-6">Looking to Rent or Sell Your Property?</h3>
                 <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
             </div>
             <div class="more-btn pt-3">
@@ -250,7 +250,7 @@ session_start();
 
         let bedroom = <?php echo json_encode($bedroom); ?>;
         $("#buy .three").each(function(i) {
-            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " beds");
+            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " rooms");
         });
 
         <?php
@@ -392,7 +392,7 @@ session_start();
 
         bedroom = <?php echo json_encode($bedroom); ?>;
         $("#rent .three").each(function(i) {
-            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " beds");
+            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " rooms");
         });
 
         <?php

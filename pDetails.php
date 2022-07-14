@@ -96,7 +96,7 @@ $row = mysqli_fetch_assoc($query);
                                     <li class="d-flex justify-content-between"> <strong>Property Type:</strong> <span><?php echo $row["type"]; ?></span></li>
                                     <li class="d-flex justify-content-between"> <strong>Status:</strong> <span><?php echo $row["option"]; ?></span></li>
                                     <li class="d-flex justify-content-between"> <strong>Area:</strong> <span><?php echo $row["area"]; ?> Sq Ft</span></li>
-                                    <li class="d-flex justify-content-between"> <strong>Beds:</strong> <span><?php echo $row["bedroom"]; ?></span></li>
+                                    <li class="d-flex justify-content-between"> <strong>Rooms:</strong> <span><?php echo $row["bedroom"]; ?></span></li>
                                     <li class="d-flex justify-content-between"> <strong>Baths:</strong> <span><?php echo $row["bathroom"]; ?></span></li>
                                     <li class="d-flex justify-content-between"> <strong>Garage:</strong> <span><?php echo $row["garge"]; ?></span></li>
                                 </ul>
@@ -118,7 +118,7 @@ $row = mysqli_fetch_assoc($query);
                                 </div>
                             </div>
                         </div>
-                        <div class="property-description">
+                        <div class="property-description pb-5">
                             <p class="description fs-5"> <?php echo $row["description"]; ?> </p>
                         </div>
                         <div class="row section-t3">

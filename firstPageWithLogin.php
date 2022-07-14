@@ -143,13 +143,13 @@ if (time() - $_SESSION["time"] > 600) {
             <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
             <div class="text-center pt-5 mt-5">
 
-                <h1 class="fw-100 pb-4">Looking to Sell your Property?</h1>
+                <h1 class="fw-100 pb-4">Sell or Rent?</h1>
 
-                <h3 class="display-6">Are You Tired of Looking for Buyer?</h3>
+                <h3 class="display-6">Looking to Sell or Rent Your Property?</h3>
                 <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
             </div>
             <div class="more-btn pt-3">
-                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
+                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit </div>
             </div>
         </div>
     </section>
@@ -263,7 +263,7 @@ if (time() - $_SESSION["time"] > 600) {
 
         let bedroom = <?php echo json_encode($bedroom); ?>;
         $("#buy .three").each(function(i) {
-            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " beds");
+            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " rooms");
         });
 
         <?php
@@ -405,7 +405,7 @@ if (time() - $_SESSION["time"] > 600) {
 
         bedroom = <?php echo json_encode($bedroom); ?>;
         $("#rent .three").each(function(i) {
-            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " beds");
+            $(this).text(type[i] + " • " + area[i] + " Sq Ft • " + bedroom[i] + " rooms");
         });
 
         <?php
