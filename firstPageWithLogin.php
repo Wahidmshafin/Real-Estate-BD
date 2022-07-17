@@ -91,11 +91,11 @@ if (time() - $_SESSION["time"] > 600) {
 
             <img src="image/background.jpg" class="starting-image starting-image-size">
             <div class="starting-heading ml-5 big-padding">
-                <h1 class="display-1" style="font-weight:900;">Hi <?php echo strtoupper($username) ?>, </h1>
+                <h1 class="display-1 pt-5" style="font-weight:900;">Hi <?php echo strtoupper($username) ?>, </h1>
             </div>
 
             <div class="starting-para">
-                <p>Searching for the perfect place to live on?<br>
+                <p class="pt-5">Searching for the perfect place to live on?<br>
                     Well, look no further, as RealEstateBD is here for you. With over 1.5 lac+ listings, 2 lacs+ users,
                     150 developers over 4 thousand+ new Projects, our web portal guarantee that everything you wish for
                     the perfect living is just a few clicks away!</p>
@@ -143,13 +143,38 @@ if (time() - $_SESSION["time"] > 600) {
             <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
             <div class="text-center pt-5 mt-5">
 
-                <h1 class="fw-100 pb-4">Sell or Rent?</h1>
+                <h1 class="fw-100 pb-4">Sell or Rent ??</h1>
 
                 <h3 class="display-6">Looking to Sell or Rent Your Property?</h3>
                 <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
             </div>
             <div class="more-btn pt-3">
                 <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-2">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005486505136"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/Wahidmshafin"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/wahid-mahmood-shafin-30a8801b9/"><i class="fa-brands fa-linkedin"></i></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="wahidmshafin@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-2 text-center text-white">
+                    <p><u><a href="firstPageWithLogin.php">Real Estate Bd</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                    <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+                </div>
+                <hr>
             </div>
         </div>
     </section>

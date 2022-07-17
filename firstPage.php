@@ -26,6 +26,8 @@ session_start();
 
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/4a53b0080a.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +38,7 @@ session_start();
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <div class="title">
-                    <a class="navbar-brand" href="#">Real Estate BD</a>
+                    <a class="navbar-brand" href="firstPageWithLogin.php">Real Estate BD</a>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglePart" aria-controls="togglePart" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +61,7 @@ session_start();
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#contact">Contact</a>
+                            <a class="nav-link active" href="#footer">Contact</a>
                         </li>
 
                         <li class="nav-item">
@@ -126,8 +128,8 @@ session_start();
 
     <!-- Submit Property part -->
 
-    <section id="submit-property">
-        <div class="property-center pt-5 mt-5">
+    <section id="submit-property" class="pad">
+        <div class="property-center py-5 mt-5" style="margin-bottom: 200px;">
             <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
             <div class="text-center pt-5 mt-5">
 
@@ -138,6 +140,30 @@ session_start();
             </div>
             <div class="more-btn pt-3">
                 <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005486505136"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/Wahidmshafin"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/wahid-mahmood-shafin-30a8801b9/"><i class="fa-brands fa-linkedin"></i></li>
+                        <li class="list-inline-item"><a href="https://www.fiverr.com/share/qb8D02"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="wahidmshafin@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="firstPageWithLogin.php">Real Estate Bd</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+                    <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+                </div>
+                <hr>
             </div>
         </div>
     </section>

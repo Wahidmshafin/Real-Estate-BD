@@ -33,7 +33,7 @@ $row = mysqli_fetch_assoc($query);
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <div class="title">
-                    <a class="navbar-brand" href="#">Real Estate BD</a>
+                    <a class="navbar-brand" href="firstPageWithLogin.php">Real Estate BD</a>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#togglePart" aria-controls="togglePart" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@ $row = mysqli_fetch_assoc($query);
                 <div class="collapse navbar-collapse" id="togglePart">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#starting">Home</a>
+                            <a class="nav-link active" href="firstPageWithLogin.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#buy">Buy</a>
@@ -68,7 +68,7 @@ $row = mysqli_fetch_assoc($query);
             </div>
         </nav>
     </header>
-    <img src="image/<?php echo $row["picture"]; ?>" alt="" width="100%" height="500px">
+    <img style="background-position: center ;backgroud-size:cover " src="image/<?php echo $row["picture"]; ?>" alt="" width="100%" height="500px">
     <div class="container pt-5 pb-5 mb-5">
 
         <div class="text-center pb-5 mb-5">
@@ -135,6 +135,10 @@ $row = mysqli_fetch_assoc($query);
                 </div>
             </div>
 
+        </div>
+        <div class="text-center pt-5">
+            <h1> For Discussion</h3>
+                <h5 class="display-5">Call: 01535484780</h5>
         </div>
     </div>
 </body>
