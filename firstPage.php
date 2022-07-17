@@ -139,7 +139,7 @@ session_start();
                 <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
             </div>
             <div class="more-btn pt-3">
-                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
+                <div class="btn btn-primary btn-lg" onclick="location.href='loginPage.html'"> Submit</div>
             </div>
         </div>
     </section>
@@ -147,7 +147,7 @@ session_start();
     <section id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <div class="col-12 mt-5 ">
                     <ul class="list-unstyled list-inline social text-center">
                         <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005486505136"><i class="fa fa-facebook"></i></a></li>
                         <li class="list-inline-item"><a href="https://github.com/Wahidmshafin"><i class="fa-brands fa-github"></i></a></li>
@@ -159,7 +159,7 @@ session_start();
                 <hr>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                <div class="col-12 mt-5 text-center text-white">
                     <p><u><a href="firstPageWithLogin.php">Real Estate Bd</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
                     <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
                 </div>

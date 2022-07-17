@@ -35,7 +35,7 @@ if (time() - $_SESSION["time"] > 600) {
 
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/4a53b0080a.js" crossorigin="anonymous"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
@@ -138,27 +138,28 @@ if (time() - $_SESSION["time"] > 600) {
 
     <!-- Submit Property part -->
 
-    <section id="submit-property">
-        <div class="property-center pt-5 mt-5">
+    <section id="submit-property" class="pad">
+        <div class="property-center py-5 mt-5" style="margin-bottom: 200px;">
             <img src="image/beachHouse.jpg" class="starting-image" alt="" style="transform: skewY(4deg);" height="500px" width="100%">
             <div class="text-center pt-5 mt-5">
 
-                <h1 class="fw-100 pb-4">Sell or Rent ??</h1>
+                <h1 class="fw-100 pb-4">Rent or Sell?</h1>
 
-                <h3 class="display-6">Looking to Sell or Rent Your Property?</h3>
+                <h3 class="display-6">Looking to Rent or Sell Your Property?</h3>
                 <h3 class="display-6">Real Estate BD provides an awesome solution!</h3>
             </div>
             <div class="more-btn pt-3">
-                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit </div>
+                <div class="btn btn-primary btn-lg" onclick="location.href='SubmitProperty.html'"> Submit</div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
+    <!-- Footer -->
     <section id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 mt-2">
+                <div class="col-12 mt-5 ">
                     <ul class="list-unstyled list-inline social text-center">
                         <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100005486505136"><i class="fa fa-facebook"></i></a></li>
                         <li class="list-inline-item"><a href="https://github.com/Wahidmshafin"><i class="fa-brands fa-github"></i></a></li>
