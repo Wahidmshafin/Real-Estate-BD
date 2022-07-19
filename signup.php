@@ -18,7 +18,7 @@ if (isset($_POST["signupUsername"])) {
             $insert = "insert into user(username,email,password) values('$username', '$email', '$password')";
             if (mysqli_query($conn, $insert)) {
                 echo "<script>alert('Registration Completed Successfully');
-                window.location='http://localhost/project/loginPage.html'</script>";
+                window.location='http://localhost/project/login.php'</script>";
             }
         }
     } else {

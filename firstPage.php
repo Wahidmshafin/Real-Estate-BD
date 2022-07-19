@@ -57,7 +57,7 @@ session_start();
                             <a class="nav-link active" href="#rent">Rent</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="login.php">Sell</a>
+                            <a class="nav-link active" href="#submit-property">Sell</a>
                         </li>
 
                         <li class="nav-item">

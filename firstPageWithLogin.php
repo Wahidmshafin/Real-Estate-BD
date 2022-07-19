@@ -66,11 +66,11 @@ if (time() - $_SESSION["time"] > 600) {
                             <a class="nav-link active" href="#rent">Rent</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="SubmitProperty.html">Sell</a>
+                            <a class="nav-link active" href="#submit-property">Sell</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#contact">Contact</a>
+                            <a class="nav-link active" href="#footer">Contact</a>
                         </li>
 
                         <li class="nav-item">
